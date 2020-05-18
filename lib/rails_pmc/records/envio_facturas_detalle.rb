@@ -24,7 +24,7 @@ module RailsPmc
     field :mensaje_ticket, 40, '137-176', :alphanumeric
     field :mensaje_pantalla, 15, '177-191', :alphanumeric
     field :codigo_barras, 60, '192-251', :alphanumeric
-    field :filler_2, 29, '262-280', :numeric
+    field :filler_2, 29, '252-280', :numeric
 
     def initialize(registro)
       @codigo_registro = 5

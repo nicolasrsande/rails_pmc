@@ -9,5 +9,4 @@ require 'rails_pmc/records/envio_facturas_trailer'
 module RailsPmc
   class Error < StandardError; end
 
-
 end
