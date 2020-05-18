@@ -33,7 +33,7 @@ module RailsPmc
         counter += 1
         total += registro[:importe_1]
       end
-      append_record EnvioFacturasTrailer(@config_data, counter, total)
+      append_record EnvioFacturasTrailer.new(@config_data, counter, total)
     end
 
   end
