@@ -16,7 +16,7 @@ module RailsPmc
     field :cantidad_registros, 7, '17-23', :numeric
     field :filler_1, 7, '24-30', :numeric
     field :total_importe, 16, '31-46', :numeric
-    field :filler_2, 264, '47-280', :numeric
+    field :filler_2, 234, '47-280', :numeric
 
     def initialize(config_data, counter, total)
       @codigo_registro = 0
