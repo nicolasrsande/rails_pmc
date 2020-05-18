@@ -16,7 +16,7 @@ module RailsPmc
 
     def initialize(config_data)
       @codigo_registro = 9
-      @codigo_prisma = config_data[:codigo_prisma]
+      @codigo_prisma = 400
       @codigo_empresa = config_data[:codigo_empresa]
       @fecha_archivo = config_data[:fecha_archivo]
       @filler = 0

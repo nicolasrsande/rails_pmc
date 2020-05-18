@@ -38,7 +38,7 @@ module RailsPmc
       @fecha_vencimiento_3 = registro[:vto_3]  || @fecha_vencimiento_1
       @importe_vencimiento_3 = registro[:importe_3] || @importe_vencimiento_1
       @filler_1 = 0
-      @numero_referencia_ant = registro[:nro_ref_ant] || numero_referencia
+      @numero_referencia_ant = registro[:nro_ref_ant] || @numero_referencia
       @mensaje_ticket = registro[:detalle] || 'Pago C/C'
       @mensaje_pantalla = registro[:detalle] || 'Pago C/C'
       @codigo_barras = registro[:codigo_barras] || 0

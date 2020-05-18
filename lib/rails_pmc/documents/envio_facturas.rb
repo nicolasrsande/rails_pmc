@@ -13,9 +13,10 @@ module RailsPmc
   #                 nro_ref_ant: num (opt),
   #                 detalle: alph (opt) }, { .. }, ..., { .. }]
   ## CONFIG_DATA
-  # config_data = { codigo_prisma: num,
-  #                 codigo_empresa: num,
+  # config_data = { codigo_empresa: num,
   #                 fecha_archivo: yyyymmdd }
+  #
+  # RailsPmc::EnvioFacturas.new(config_data: {codigo_prisma: 1233, codigo_empresa: 1231, fecha_archivo: 20200101} registros: [{numero_referencia: 534, id_factura: 54564, vto_1: 20200101, importe_1: 4400}]).build
   class EnvioFacturas < Fixy::Document
 
     def initialize(attrs = {})
