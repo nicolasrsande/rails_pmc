@@ -2,6 +2,7 @@ module RailsPmc
 
   class EnvioFacturasTrailer < Fixy::Record
     include Fixy::Formatter::Numeric
+    include Fixy::Formatter::NumericCurrency
 
     set_record_length 280
 
@@ -15,7 +16,7 @@ module RailsPmc
     field :fecha_archivo, 8, '9-16', :numeric
     field :cantidad_registros, 7, '17-23', :numeric
     field :filler_1, 7, '24-30', :numeric
-    field :total_importe, 16, '31-46', :numeric
+    field :total_importe, 16, '31-46', :numeric_currency
     field :filler_2, 234, '47-280', :numeric
 
     def initialize(config_data, counter, total)
