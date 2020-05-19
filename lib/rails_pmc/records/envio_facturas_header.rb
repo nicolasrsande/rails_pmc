@@ -15,7 +15,7 @@ module RailsPmc
     field :filler, 264, '17-280', :numeric
 
     def initialize(config_data)
-      @codigo_registro = 9
+      @codigo_registro = 0
       @codigo_prisma = 400
       @codigo_empresa = config_data[:codigo_empresa]
       @fecha_archivo = config_data[:fecha_archivo]&.strftime('%Y%m%d')
