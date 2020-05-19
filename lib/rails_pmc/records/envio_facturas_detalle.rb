@@ -31,11 +31,11 @@ module RailsPmc
       @numero_referencia = registro[:numero_referencia]
       @id_factura = registro[:id_factura]
       @codigo_moneda = 0
-      @fecha_vencimiento_1 = registro[:vto_1]
+      @fecha_vencimiento_1 = registro[:vto_1].strftime('%Y%m%d')
       @importe_vencimiento_1 = registro[:importe_1]
-      @fecha_vencimiento_2 = registro[:vto_2] ||= @fecha_vencimiento_1
+      @fecha_vencimiento_2 = registro[:vto_2].strftime('%Y%m%d') ||= @fecha_vencimiento_1
       @importe_vencimiento_2 = registro[:importe_2] || @importe_vencimiento_1
-      @fecha_vencimiento_3 = registro[:vto_3] || @fecha_vencimiento_1
+      @fecha_vencimiento_3 = registro[:vto_3].strftime('%Y%m%d') || @fecha_vencimiento_1
       @importe_vencimiento_3 = registro[:importe_3] || @importe_vencimiento_1
       @numero_referencia_ant = registro[:nro_ref_ant] || @numero_referencia
       @mensaje_ticket = registro[:detalle] || 'Pago C/C'

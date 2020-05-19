@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module RailsPmc
   ## Example File
   ## REGISTROS
@@ -35,6 +37,5 @@ module RailsPmc
       end
       append_record EnvioFacturasTrailer.new(@config_data, counter, total)
     end
-
   end
 end

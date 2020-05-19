@@ -18,7 +18,7 @@ module RailsPmc
       @codigo_registro = 9
       @codigo_prisma = 400
       @codigo_empresa = config_data[:codigo_empresa]
-      @fecha_archivo = config_data[:fecha_archivo]
+      @fecha_archivo = config_data[:fecha_archivo].strftime('%Y%m%d')
       @filler = 0
     end
 
