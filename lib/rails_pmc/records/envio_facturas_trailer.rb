@@ -22,7 +22,7 @@ module RailsPmc
       @codigo_registro = 0
       @codigo_prisma = 400
       @codigo_empresa = config_data[:codigo_empresa]
-      @fecha_archivo = config_data[:fecha_archivo].strftime('%Y%m%d')
+      @fecha_archivo = config_data[:fecha_archivo]&.strftime('%Y%m%d')
       @cantidad_registros = counter
       @total_importe = total
       @filler_1 = @filler_2 = 0
