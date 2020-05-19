@@ -2,6 +2,7 @@ module RailsPmc
   class EnvioFacturasDetalle < Fixy::Record
     include Fixy::Formatter::Alphanumeric
     include Fixy::Formatter::Numeric
+    include Fixy::Formatter::NumericCurrency
 
     set_record_length 280
 
@@ -14,11 +15,11 @@ module RailsPmc
     field :id_factura, 20, '21-40', :alphanumeric
     field :codigo_moneda, 1, '41-41', :numeric
     field :fecha_vencimiento_1, 8, '42-49', :numeric
-    field :importe_vencimiento_1, 11, '50-60', :numeric
+    field :importe_vencimiento_1, 11, '50-60', :numeric_currency
     field :fecha_vencimiento_2, 8, '61-68', :numeric
-    field :importe_vencimiento_2, 11, '69-79', :numeric
+    field :importe_vencimiento_2, 11, '69-79', :numeric_currency
     field :fecha_vencimiento_3, 8, '80-87', :numeric
-    field :importe_vencimiento_3, 11, '88-98', :numeric
+    field :importe_vencimiento_3, 11, '88-98', :numeric_currency
     field :filler_1, 19, '99-117', :numeric
     field :numero_referencia_ant, 19, '118-136', :alphanumeric
     field :mensaje_ticket, 40, '137-176', :alphanumeric
